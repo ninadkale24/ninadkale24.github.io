@@ -750,8 +750,8 @@ const SETTINGS = {
   let seen = false; try{ seen = sessionStorage.getItem("nk-lights") === "1"; }catch(e){}
   if(reduce || seen){ go(); }
   else{
-   panels.forEach((p,i) => timers.push(setTimeout(() => { p.classList.add("on"); hero.style.setProperty("--lit", i+1); }, 300 + i*400)));
-timers.push(setTimeout(go, 300 + 4*400 + 400));
+  panels.forEach((p,i) => timers.push(setTimeout(() => { p.classList.add("on"); hero.style.setProperty("--lit", i+1); }, 300 + i*500)));
+timers.push(setTimeout(go, 300 + 4*500 + 500));
   }
   $("#skipIntro").addEventListener("click", go);
   addEventListener("keydown", e => { if(!done && (e.key === "Escape" || e.key === " ")){ e.preventDefault(); go(); } });
