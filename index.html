@@ -751,7 +751,7 @@ const SETTINGS = {
   if(reduce || seen){ go(); }
   else{
    panels.forEach((p,i) => timers.push(setTimeout(() => { p.classList.add("on"); hero.style.setProperty("--lit", i+1); }, 300 + i*300)));
-timers.push(setTimeout(go, 300 + 4*300 + 400 + Math.random()*400));
+timers.push(setTimeout(go, 300 + 4*300 + 300));
   }
   $("#skipIntro").addEventListener("click", go);
   addEventListener("keydown", e => { if(!done && (e.key === "Escape" || e.key === " ")){ e.preventDefault(); go(); } });
